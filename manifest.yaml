@@ -32,6 +32,8 @@ spec:
     spec:
       containers:
       - image: moment-ai:latest
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
         imagePullPolicy: IfNotPresent
         name: moment-ai
         resources: {}
